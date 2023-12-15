@@ -16,7 +16,7 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         android:background="@color/green"
-        android:text="Introuduce Yourself"/>
+        android:text="your profile"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,48 +33,25 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:src="@drawable/haruru" />
+                android:layout_marginTop="40dp"
+                tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="20dp"
-                android:text="Q1. 당신의 이름은??"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/answer_name"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:text="ID"
                 android:layout_marginStart="50dp"
-                android:autofillHints=""
-                android:background="@drawable/searchbox"
-                android:ems="10"
-                android:inputType="text"
-                android:minHeight="40dp"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:textColor="#070707"
-                android:textColorHint="#000000" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Q2. 당신의 MBTI는??"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
-                android:layout_marginStart="15dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
             <EditText
-                android:id="@+id/answer_MBTI"
+                android:id="@+id/get_ID"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
@@ -91,15 +68,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Q3. 당신의 최애곡은??"
+                android:text="name"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-            <EditText
-                android:id="@+id/answer_music"
+            <TextView
+                android:id="@+id/get_name"
+                android:text="홍길동"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
@@ -110,21 +88,23 @@
                 android:autofillHints=""
                 android:background="@drawable/searchbox"
                 android:ems="10"
+                android:textSize="30dp"
                 android:inputType="text"
                 android:minHeight="40dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Q4. 당신의 성별은??"
+                android:text="Age"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-            <EditText
-                android:id="@+id/answer_gender"
+            <TextView
+                android:id="@+id/get_age"
+                android:text="24"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
@@ -135,47 +115,23 @@
                 android:autofillHints=""
                 android:background="@drawable/searchbox"
                 android:ems="10"
+                android:textSize="30dp"
                 android:inputType="text"
                 android:minHeight="40dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Q5. 당신의 좌우명은??"
+                android:text="Gender"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
-
-            <EditText
-                android:id="@+id/answer_motto"
-                android:layout_width="300dp"
-                android:layout_marginStart="50dp"
-                android:layout_height="wrap_content"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:textColorHint="#000000"
-                android:textColor="#070707"
-                android:autofillHints=""
-                android:background="@drawable/searchbox"
-                android:ems="10"
-                android:inputType="text"
-                android:minHeight="40dp" />
 
             <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Q6. 당신의 생일은??"
-                android:layout_marginTop="20dp"
-                android:textSize="20dp"
-                android:layout_marginStart="15dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <EditText
-                android:id="@+id/answer_birthday"
+                android:id="@+id/get_Gender"
+                android:text="남성"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
@@ -186,21 +142,23 @@
                 android:autofillHints=""
                 android:background="@drawable/searchbox"
                 android:ems="10"
+                android:textSize="30dp"
                 android:inputType="text"
                 android:minHeight="40dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Q7. 당신의 인생영화!!"
+                android:text="MBTI"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-            <EditText
-                android:id="@+id/answer_movie"
+            <TextView
+                android:id="@+id/get_MBTI"
+                android:text="INTP"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
@@ -211,21 +169,104 @@
                 android:autofillHints=""
                 android:background="@drawable/searchbox"
                 android:ems="10"
+                android:textSize="30dp"
+                android:inputType="text"
+                android:minHeight="40dp" />
+
+            <ImageView
+                android:id="@+id/img_mbti"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/aaannnn"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="당신과 동일한 mbti인 유명인사"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <ImageView
+                android:id="@+id/img_mbti2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/aaannnn"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_mbti"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="상황에 따라 달라질 말1"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/img_mbti3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/aaannnn"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_mbti2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="상황에 따라 달라질 말2"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Birthday"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/get_birthday"
+                android:text="2000.11.03"
+                android:layout_width="300dp"
+                android:layout_marginStart="50dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                android:textColor="#070707"
+                android:autofillHints=""
+                android:background="@drawable/searchbox"
+                android:ems="10"
+                android:textSize="30dp"
                 android:inputType="text"
                 android:minHeight="40dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Q8. 여행가고 싶은 나라"
+                android:text="All time favorite Moive"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-            <EditText
-                android:id="@+id/answer_country"
+            <TextView
+                android:id="@+id/get_movie"
+                android:text="맘마미아!"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
@@ -236,21 +277,23 @@
                 android:autofillHints=""
                 android:background="@drawable/searchbox"
                 android:ems="10"
+                android:textSize="30dp"
                 android:inputType="text"
                 android:minHeight="40dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Q9. 제일 좋아하는 음식!!"
+                android:text="All time favorite Music"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-            <EditText
-                android:id="@+id/answer_food"
+            <TextView
+                android:id="@+id/get_music"
+                android:text="민영기 - 나비"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
@@ -261,21 +304,49 @@
                 android:autofillHints=""
                 android:background="@drawable/searchbox"
                 android:ems="10"
+                android:textSize="30dp"
+                android:inputType="text"
+                android:minHeight="40dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Want to vist Country"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/get_country"
+                android:text="그리스"
+                android:layout_width="300dp"
+                android:layout_marginStart="50dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                android:textColor="#070707"
+                android:autofillHints=""
+                android:background="@drawable/searchbox"
+                android:ems="10"
+                android:textSize="30dp"
                 android:inputType="text"
                 android:minHeight="40dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Q10. 당신의 나이는?"
+                android:text="favortie Food"
                 android:layout_marginTop="20dp"
                 android:textSize="20dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-            <EditText
-                android:id="@+id/answer_age"
+            <TextView
+                android:id="@+id/get_food"
+                android:text="떡볶이"
                 android:layout_width="300dp"
                 android:layout_marginStart="50dp"
                 android:layout_height="wrap_content"
@@ -286,19 +357,52 @@
                 android:autofillHints=""
                 android:background="@drawable/searchbox"
                 android:ems="10"
+                android:textSize="30dp"
+                android:inputType="text"
+                android:minHeight="40dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Motto"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:layout_marginStart="50dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/get_motto"
+                android:text="열심히 살자."
+                android:layout_width="300dp"
+                android:layout_marginStart="50dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                android:textColor="#070707"
+                android:autofillHints=""
+                android:background="@drawable/searchbox"
+                android:ems="10"
+                android:textSize="30dp"
                 android:inputType="text"
                 android:minHeight="40dp" />
 
             <Button
-                android:id="@+id/btn_save"
+                android:id="@+id/btn_change"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:textStyle="bold"
-                android:text="저장하기"
+                android:text="수정하기"
                 android:textSize="25dp"/>
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
 
         </LinearLayout>

@@ -1,12 +1,12 @@
 package com.android.loginpage
 
 import android.content.Intent
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build.ID
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class SingupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,21 +14,22 @@ class SingupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_singup)
 
         val btnBack = findViewById<Button>(R.id.btn_back)
-        val etname = findViewById<EditText>(R.id.et_name)
-        val etid = findViewById<EditText>(R.id.et_id)
-        val etpassword = findViewById<EditText>(R.id.et_Password)
-        val etpassword2 = findViewById<EditText>(R.id.et_Password2)
 
         fun isValidPassword(etpassword: String): Boolean {
-            val regex = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$^*]).{8,16}$")
+            val regex = Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,16}$")
             return regex.matches(etpassword)
+        }
+        fun isValidId(etid: String): Boolean {
+            val regex2 = Regex("^(?=.*[a-z])(?=.*[0-9])+$")
+            return regex2.matches(etid)
         }
 
         btnBack.setOnClickListener {
-            if (!isValidPassword(etpassword.text.toString())) {
-                Toast.makeText(this, "비밀번호 형식이 올바르지 않습니다. 특수문자, 대소문자, 숫자의 조합을 사용해주세요", Toast.LENGTH_LONG).show()
-                return@setOnClickListener
-            }
+            val etname = findViewById<EditText>(R.id.et_name)
+            val etid = findViewById<EditText>(R.id.et_id)
+            val etpassword = findViewById<EditText>(R.id.et_Password)
+            val etpassword2 = findViewById<EditText>(R.id.et_Password2)
+
             if (etname.text.isEmpty()) {
                 Toast.makeText(this, "이름을 입력해주세요", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -41,15 +42,28 @@ class SingupActivity : AppCompatActivity() {
             } else if(etpassword.text.toString() != etpassword2.text.toString()) {
                 Toast.makeText(this, "비밀번호가 다릅니다!! 다시 입력해주세요.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
-            } else {
+            }
+            if (!isValidPassword(etpassword.text.toString())) {
+                Toast.makeText(this, "비밀번호 형식이 올바르지 않습니다. 특수문자, 대소문자, 숫자의 조합을 사용해주세요", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+            if (!isValidId(etid.text.toString())) {
+                Toast.makeText(this, "아이디는 소문자와 숫자의 조합으로 사용해주세요", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }else {
                 Toast.makeText(this, "회원가입 완료", Toast.LENGTH_SHORT).show()
             }
 
+            val id = etid.text.toString()
+            val pw = etpassword.text.toString()
             val intent = Intent(this, SignInActivity::class.java)
+            intent.putExtra("ID", id)
+            intent.putExtra("pw", pw)
+
             startActivity(intent)
+
+
+
         }
-
-
-
     }
 }
