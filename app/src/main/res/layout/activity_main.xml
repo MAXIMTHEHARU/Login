@@ -7,13 +7,12 @@
     android:orientation="vertical"
     tools:context=".SignInActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="30dp"
-        android:rotation="0"
 
-        android:src="@drawable/haruru" />
+    <ImageView
+        android:layout_width="254dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:src="@drawable/harunuu" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +20,7 @@
         android:text="아이디"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:textSize="20dp"/>
 
     <EditText
@@ -38,7 +37,7 @@
         android:text="비밀번호"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/ET_Password"
@@ -56,7 +55,7 @@
         android:layout_marginTop="30dp"
         android:text="로그인"
         android:textStyle="bold"
-        android:textSize="25dp"/>
+        android:textSize="25sp"/>
 
     <Button
         android:id="@+id/btn_Signup"
@@ -67,6 +66,8 @@
         android:text="회원가입"
         android:textStyle="bold"
         android:textSize="25dp"/>
+
+
 
 
 
